@@ -1,7 +1,7 @@
 import React from 'react';
-import CompleteIcon from './CompleteIcon';
-import DeleteIcon from './DeleteIcon';
-import '../Estilos-Componentes/TodoItem.css';
+import CompleteIcon from '../TodoIcon/CompleteIcon';
+import DeleteIcon from '../TodoIcon/DeleteIcon';
+import './TodoItem.css';
 
 
 function TodoItem(props){
@@ -15,7 +15,7 @@ function TodoItem(props){
         {/* <span className={`Icon
             Icon-check 
             ${props.completed && "Icon-check--active"}`}
-            onClick={props.onComplete}          
+            onClick={props.onComplete}        
             
         >V</span> */}
 

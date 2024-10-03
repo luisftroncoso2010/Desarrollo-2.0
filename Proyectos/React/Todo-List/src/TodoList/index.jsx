@@ -1,4 +1,4 @@
-import '../Estilos-Componentes/TodoList.css'
+import './TodoList.css'
 
 const TodoList = ({children}) => {
   return (

@@ -1,4 +1,4 @@
-import '../Estilos-Componentes/TodoSearch.css'
+import './TodoSearch.css'
 
 const TodoSearch = ({searchValue, setSearchValue}) => {   
     

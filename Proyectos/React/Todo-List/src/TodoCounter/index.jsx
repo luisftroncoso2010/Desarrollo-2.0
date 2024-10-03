@@ -1,7 +1,6 @@
-import '../Estilos-Componentes/TodoCounter.css';
+import './TodoCounter.css';
 
-function TodoCounter({total, completed}){   
-    
+function TodoCounter({total, completed}){         
     return(
       <h1 className={`TodoCounter ${completed === total && 'bold-text'}`}>
         {completed === total ? (
