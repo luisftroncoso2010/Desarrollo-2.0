@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Desarrollo-2.0/Proyectos/React/Todo-List/static/css/main.9f3e6e1e.css",
+    "main.js": "/Desarrollo-2.0/Proyectos/React/Todo-List/static/js/main.aa47228c.js",
+    "index.html": "/Desarrollo-2.0/Proyectos/React/Todo-List/index.html",
+    "static/media/delete.svg": "/Desarrollo-2.0/Proyectos/React/Todo-List/static/media/delete.7018c4465589031bd51c8efbe21df9ca.svg",
+    "static/media/check.svg": "/Desarrollo-2.0/Proyectos/React/Todo-List/static/media/check.e9a948bba52a34123d2ed7aeda0ea495.svg",
+    "main.9f3e6e1e.css.map": "/Desarrollo-2.0/Proyectos/React/Todo-List/static/css/main.9f3e6e1e.css.map",
+    "main.aa47228c.js.map": "/Desarrollo-2.0/Proyectos/React/Todo-List/static/js/main.aa47228c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f3e6e1e.css",
+    "static/js/main.aa47228c.js"
+  ]
+}
