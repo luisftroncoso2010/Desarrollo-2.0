@@ -1,14 +1,15 @@
 import React, { useState, createContext } from 'react'
-import './useLocalStorage.js'
+import { useLocalStorage } from './useLocalStorage'
 
 const TodoContex = createContext();
 
-const TodoProvider = ({children}) => {
+const TodoProvider = ({ children }) => {
      
   /* Le pasamos el estado como inicial el local estorage */
   const {item: todos,  saveItem: saveTodos, loading, error} = useLocalStorage('TODOS_V1', [])
-  const [searchValue, setSearchValue] = useState('');   
-  
+  const [searchValue, setSearchValue] = useState('');
+  const [openModal, setOpenModal] = useState(false);
+
 
   /* Estados derivados */
   const completedTodos = todos.filter(todo => !!todo.completed).length;
@@ -20,8 +21,19 @@ const TodoProvider = ({children}) => {
     const searchText = searchValue.toLowerCase();
     return todoText.includes(searchText)
   }); 
+
+  /* Agregar nuevos todos */
+  const addTodo = (text) => {  
+    const newTodos = [...todos]
+    newTodos.push({
+      text,
+      completed : false,
+    })
+    saveTodos(newTodos)
+  }
   
-  /* Función para cambiar el estado de 'completed' */
+  
+  /* Función para cambiar el estado de 'completed' true o false */
   const completeTodo = (text) => {
     const newTodos = [...todos]
     const todoIndex = newTodos.findIndex(todo => todo.text === text);
@@ -45,7 +57,7 @@ const TodoProvider = ({children}) => {
     }    
   };
 
-
+  /* Para cambiar el estado de Modal */ 
   return (
     /* Se encapsula toda la logica de la aplicacion */
     <TodoContex.Provider
@@ -58,10 +70,13 @@ const TodoProvider = ({children}) => {
         setSearchValue,
         searctedTodos,
         completeTodo,
-        deleteTodo
+        deleteTodo,
+        openModal,
+        setOpenModal,
+        addTodo
       }}
     >
-        {children}      
+      {children}      
     </TodoContex.Provider>
   )
 }
